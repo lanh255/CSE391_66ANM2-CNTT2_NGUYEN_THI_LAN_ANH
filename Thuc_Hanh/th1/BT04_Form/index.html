@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 04 - Sample Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <form action="#" method="post">
+      <!-- BASIC INFO -->
+      <h3 class="section-title">Basic Info</h3>
+
+      <div class="row">
+        <div class="label">Employee ID</div>
+        <div class="control">
+          <div class="readonly">9</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Last Name</div>
+        <div class="control">
+          <div class="readonly">Dodsworth</div>
+        </div>
+      </div>
+
+<div class="row">
+  <div class="label">First Name</div>
+  <div class="control">
+    <div class="first-combo">
+      <input
+        type="text"
+        value="Anne"
+        list="firstNameList"
+        class="first-input"
+      />
+      <span class="first-arrow">▾</span>
+    </div>
+
+    <datalist id="firstNameList">
+      <option value="Anne">
+      <option value="Anna">
+      <option value="Annie">
+      <option value="Andrew">
+      <option value="Anthony">
+    </datalist>
+  </div>
+</div>
+
+      <div class="row" style="align-items:flex-start;">
+        <div class="label" style="padding-top:3px;">Gender</div>
+        <div class="control">
+          <div class="stack">
+            <label><input type="radio" name="gender" />Male</label>
+            <label><input type="radio" name="gender" checked />Female</label>
+            <label><input type="radio" name="gender" />XXX</label>
+            <label><input type="radio" name="gender" />ZZZ</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Title</div>
+        <div class="control">
+          <input type="text" value="Sales Representative" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Suffix</div>
+        <div class="control">
+          <input type="text" value="Ms." />
+        </div>
+      </div>
+
+<div class="row row-3">
+  <div class="label">BirthDate</div>
+  <div class="control">
+    <input class="datepick" type="datetime-local" value="1969-07-02T00:00" />
+  </div>
+  <div class="side-icon"><span class="qmark">(?)</span></div>
+</div>
+
+<div class="row row-3">
+  <div class="label">HireDate</div>
+  <div class="control">
+    <input class="datepick" type="datetime-local" value="1994-11-15T00:00" />
+  </div>
+  <div class="side-icon"><span class="qmark">(?)</span></div>
+</div>
+
+      <div class="row row-3">
+        <div class="label">SSN # (if applicable)</div>
+
+        <div class="control">
+          <input
+            id="ssn"
+            class="input-long pad-right"
+            type="password"
+            value="123456"
+            autocomplete="off"
+          />
+
+          <button
+            type="button"
+            id="ssnToggle"
+            class="ssn-lock-btn"
+            aria-pressed="false"
+            aria-label="Show SSN"
+            title=""
+          >
+            <span class="ssn-lock" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="side-icon"></div>
+      </div>
+
+      <div class="row">
+        <div class="label">Reports To</div>
+        <div class="control">
+          <div class="spinbox" id="reportsSpin">
+            <input id="reportsTo" type="text" value="Buchanan" readonly />
+            <div class="spinbtns">
+              <button type="button" class="spin up" aria-label="Up">▲</button>
+              <button type="button" class="spin down" aria-label="Down">▼</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <h3 class="section-title">Contact Info</h3>
+
+      <div class="row">
+        <div class="label">Email</div>
+        <div class="control">
+          <input type="email" placeholder="name@example.com" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Address</div>
+        <div class="control">
+          <input type="text" value="7 Houndstooth Rd." />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">City</div>
+        <div class="control">
+          <input type="text" value="London" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Region</div>
+        <div class="control">
+          <input type="text" value="" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Postal Code</div>
+        <div class="control">
+          <input type="text" value="WG2 7LT" />
+        </div>
+      </div>
+
+<div class="row">
+  <div class="label">Country</div>
+  <div class="control">
+    <div class="classic-select">
+      <select class="classic-select__field">
+        <option>Viet Nam</option>
+        <option selected>Russian Federation</option>
+        <option>United Kingdom</option>
+        <option>United States</option>
+      </select>
+      <span class="classic-select__arrow" aria-hidden="true">▼</span>
+    </div>
+  </div>
+</div>
+
+      <div class="row">
+        <div class="label">US Home Phone</div>
+        <div class="control">
+          <input type="text" value="(234)234-2342" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Photo</div>
+        <div class="control">
+          <input type="text" value="EmpID9.bmp" />
+        </div>
+      </div>
+
+      <!-- OPTIONAL INFO -->
+      <h3 class="section-title">Optional Info</h3>
+
+      <div class="row" style="align-items:flex-start;">
+        <div class="label" style="padding-top:3px;">Notes</div>
+        <div class="control">
+          <div class="toolbar" aria-hidden="true">
+            <div class="tb-btn"><b>B</b></div>
+            <div class="tb-btn"><i>I</i></div>
+            <div class="tb-btn"><u>U</u></div>
+            <div class="tb-btn">S</div>
+            <div class="tb-btn">≡</div>
+            <div class="tb-btn">≣</div>
+            <div class="tb-btn">↤</div>
+            <div class="tb-btn">↦</div>
+            <div class="tb-btn">x₂</div>
+            <div class="tb-btn">x²</div>
+            <div class="tb-btn">🔗</div>
+            <div class="tb-btn">🧾</div>
+          </div>
+          <div class="notes-wrap">
+            <textarea>Anne has a BA degree in English from St. Lawrence College.
+She is fluent in French and German.ZZZ</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="align-items:flex-start;">
+        <div class="label" style="padding-top:3px;">Preferred Shift</div>
+        <div class="control">
+          <div class="stack">
+            <label><input type="checkbox" />Regular</label>
+            <label><input type="checkbox" checked />Gravy Yard</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Active?</div>
+        <div class="control">
+          <label class="muted">
+            <input type="checkbox" checked style="margin-right:6px;" />
+          </label>
+        </div>
+      </div>
+
+      <div class="row" style="align-items:flex-start;">
+        <div class="label" style="padding-top:3px;">Are you human?</div>
+        <div class="control">
+          <div class="captcha" style="margin-bottom:6px;">
+            <div class="captcha-box" id="captchaText">TDAWO</div>
+            <div class="captcha-refresh" id="captchaRefresh">Click to change</div>
+          </div>
+          <input type="text" />
+        </div>
+      </div>
+
+<div class="footer-like">
+  <div class="footer-left">
+    <div class="mini-nav">
+      <button type="button" class="mini-nav-btn">◀</button>
+      <button type="button" class="mini-nav-btn">▶</button>
+    </div>
+    <div class="required-note-like">* required</div>
+  </div>
+
+  <div class="footer-right">
+    <button type="submit" class="btn-like">
+      <span class="btn-ic">▣</span>
+      Submit
+    </button>
+    <button type="reset" class="btn-like">
+      <span class="btn-ic">×</span>
+      Cancel
+    </button>
+  </div>
+</div>
+    </form>
+  </div>
+
+  <script>
+    // CAPTCHA đổi mã
+    const captchaText = document.getElementById("captchaText");
+    const captchaRefresh = document.getElementById("captchaRefresh");
+
+    function randomCaptcha(len = 5){
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      let s = "";
+      for(let i=0;i<len;i++){
+        s += chars[Math.floor(Math.random()*chars.length)];
+      }
+      return s;
+    }
+
+    captchaRefresh.addEventListener("click", () => {
+      captchaText.textContent = randomCaptcha(5);
+    });
+
+    const ssnInput = document.getElementById("ssn");
+    const ssnToggle = document.getElementById("ssnToggle");
+    const ssnIcon = ssnToggle.querySelector(".ssn-lock");
+
+    ssnToggle.addEventListener("click", () => {
+      const isHidden = (ssnInput.type === "password");
+      ssnInput.type = isHidden ? "text" : "password";
+
+      ssnToggle.setAttribute("aria-pressed", String(isHidden));
+      ssnToggle.setAttribute("aria-label", isHidden ? "Hide SSN" : "Show SSN");
+
+      ssnIcon.classList.toggle("open", isHidden);
+    });
+
+    const reportsList = ["Buchanan", "Fuller", "Leverling", "King"];
+    let reportsIndex = 0;
+
+    const reportsInput = document.getElementById("reportsTo");
+    const reportsSpin = document.getElementById("reportsSpin");
+    const btnUp = reportsSpin.querySelector(".spin.up");
+    const btnDown = reportsSpin.querySelector(".spin.down");
+
+    const start = reportsList.indexOf(reportsInput.value.trim());
+    reportsIndex = start >= 0 ? start : 0;
+
+    function renderReports(){
+      reportsInput.value = reportsList[reportsIndex];
+    }
+
+    btnUp.addEventListener("click", () => {
+      reportsIndex = (reportsIndex - 1 + reportsList.length) % reportsList.length;
+      renderReports();
+    });
+
+    btnDown.addEventListener("click", () => {
+      reportsIndex = (reportsIndex + 1) % reportsList.length;
+      renderReports();
+    });
+
+    document.querySelector(".combo-arrow").addEventListener("click", () => {
+      document.querySelector(".combo-input").focus();
+    });
+  </script>
+</body>
+</html>

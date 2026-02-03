@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BT05 - HR Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (đen) -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="brand">HR Management</div>
+      <nav class="links">
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <input id="searchInput" class="search-input" type="text" placeholder="Search..." />
+      <button id="btnSearch" class="btn btn-dark">Search</button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="wrap">
+    <section class="panel">
+      <div class="panel-head">
+        <h2 class="panel-title">Employee</h2>
+        <button id="btnAdd" class="btn btn-blue">+ Add</button>
+      </div>
+
+      <div class="table-box">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:60px;">ID</th>
+              <th style="width:180px;">Name</th>
+              <th>Email</th>
+              <th style="width:150px;">Phone</th>
+              <th style="width:140px;">Position</th>
+              <th style="width:170px;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <!-- render by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="overlay" class="overlay hidden">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <div class="modal-title">New Employee</div>
+        <button id="btnClose" class="modal-close" aria-label="Close">×</button>
+      </div>
+
+      <form id="form" class="modal-body">
+        <input type="hidden" id="editingId" />
+
+        <div class="grid-2">
+          <div class="form-row">
+            <label>Name</label>
+            <input id="name" type="text" />
+            <small class="err" id="errName"></small>
+          </div>
+
+          <div class="form-row">
+            <label>Email</label>
+            <input id="email" type="text" />
+            <small class="err" id="errEmail"></small>
+          </div>
+
+          <div class="form-row">
+            <label>Phone</label>
+            <input id="phone" type="text" />
+            <small class="err" id="errPhone"></small>
+          </div>
+
+          <div class="form-row">
+            <label>Position</label>
+            <select id="position">
+              <option value="">-- Select Position --</option>
+              <option>Staff</option>
+              <option>Manager</option>
+              <option>CEO</option>
+            </select>
+            <small class="err" id="errPos"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Sex</label>
+          <div class="radio-row">
+            <label><input type="radio" name="sex" value="Male" checked /> Male</label>
+            <label><input type="radio" name="sex" value="Female" /> Female</label>
+          </div>
+        </div>
+
+        <div class="modal-foot">
+          <button type="submit" class="btn btn-green">Save</button>
+          <button type="button" id="btnCancel" class="btn btn-gray">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
