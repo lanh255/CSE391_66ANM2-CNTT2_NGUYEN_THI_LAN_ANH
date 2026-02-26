@@ -1,0 +1,111 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== KHUNG NGOÀI (viền xanh nhạt) ===== */
+.container {
+  width: min(1100px, 92%);
+  margin: 60px auto;
+  border: 3px solid #7cc7ff;
+  padding: 60px 70px 70px;
+  background: #fff;
+}
+
+/* ===== TIÊU ĐỀ GIỮA 2 DÒNG ===== */
+.container h1 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+/* ===== 2 CỘT DƯỚI ===== */
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* ===== CARD BÊN TRÁI ===== */
+.left-card {
+  width: 340px;
+  background: #fff;
+  padding: 36px 30px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.left-card h3 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #2b2b2b;
+}
+
+.left-card p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #6b6b6b;
+}
+
+/* tác giả */
+.author {
+  margin-top: 26px;
+  font-weight: 700;
+  color: #333;
+}
+
+.author .role {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #3a88c8;
+}
+
+/* ===== TEXT BÊN PHẢI ===== */
+.right-text {
+  flex: 1;
+}
+
+.right-text p {
+  font-size: 12px;
+  line-height: 1.95;
+  color: #6b6b6b;
+  margin-bottom: 18px;
+}
+
+.right-text .bold {
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+/* ===== RESPONSIVE (màn hình nhỏ xếp dọc) ===== */
+@media (max-width: 900px) {
+  .container {
+    padding: 40px 22px 45px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .left-card {
+    width: 100%;
+  }
+}

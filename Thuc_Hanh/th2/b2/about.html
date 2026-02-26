@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>About</title>
+
+    <style>
+      /* riêng cho about */
+      #about-hero {
+        height: 420px;
+        background-image: url("images/places/paris.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about-box {
+        width: 700px;
+        max-width: 90%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+        padding: 35px 40px;
+        border-radius: 6px;
+      }
+
+      .about-box h1 {
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+
+      .about-box p {
+        opacity: 0.9;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      #about-content {
+        background: #bfefff;
+        padding: 40px 0 50px;
+      }
+
+      .about-wrapper {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .about-wrapper h2 {
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        color: #333;
+      }
+
+      .about-wrapper p {
+        color: #333;
+        line-height: 1.8;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="/index.html">Travel Goals</a>
+        <ul>
+          <li><a href="/places.html">Destinations</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about-hero">
+        <div class="about-box">
+          <h1>About Travel Goals</h1>
+          <p>
+            This page is part of Practice 02. The goal is to build a clean landing
+            page using HTML & CSS, based on the given mockup.
+          </p>
+          <a class="btn" href="/index.html">Back to Home</a>
+        </div>
+      </section>
+
+      <section id="about-content">
+        <div class="about-wrapper">
+          <h2>What you will see</h2>
+          <p>
+            ✅ A hero banner with centered overlay content (like the homepage).
+          </p>
+          <p>
+            ✅ Consistent fonts, spacing, and colors across pages.
+          </p>
+          <p>
+            ✅ Destinations page styled using the provided CSS files.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <img src="icons/insta.png" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <img src="icons/facebook.png" alt="Facebook" />
+      </a>
+    </footer>
+  </body>
+</html>
