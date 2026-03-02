@@ -1,0 +1,224 @@
+/* TODO 1: Reset margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TODO 2: Type selector cho body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* TODO 3: ID selector cho header */
+#main-header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TODO 4: Class selector cho nav-link */
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: 0.3s; /* hiệu ứng mượt */
+}
+
+/* TODO 5: Group selector */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+}
+
+/* TODO 6: Descendant selector */
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Làm menu nằm ngang & đẹp hơn */
+nav {
+  text-align: center;
+  padding: 15px 0;
+  background-color: white;
+}
+
+/* TODO 7: Pseudo-class */
+a:hover {
+  color: #ff6600;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* Thêm khoảng cách cho nội dung */
+main {
+  padding: 30px;
+}
+
+/* Footer nhìn rõ hơn */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ddd;
+}
+
+/* Bước 1: Reset box-sizing cho toàn trang */
+* {
+  box-sizing: border-box;
+}
+
+.posts {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+/* Bước 4: Style cho .btn */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Hover cho nút */
+.btn:hover {
+  background: #0056b3;
+}
+
+/* ===== TH3A - FLEXBOX (GHI ĐÈ CODE CŨ) ===== */
+
+/* Menu flex */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+}
+
+/* Posts flex */
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* Card: bỏ hẳn width/display inline-block cũ */
+.card {
+  display: block;              /* ghi đè inline-block */
+  width: auto;                 /* ghi đè width: 30% */
+  margin: 0;                   /* ghi đè margin: 10px (vì đã dùng gap) */
+  flex: 1 1 300px;             /* tự co giãn, desktop vẫn ra 3 cột nếu đủ rộng */
+  max-width: calc(33.33% - 20px);
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .posts {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+/* ===== TH3B - CSS GRID (Gallery) ===== */
+.gallery {
+  display: grid;
+
+  /* Desktop: 3 cột */
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px; /* để mobile không dính sát mép */
+}
+
+.item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 150px;
+  font-size: 2rem;
+  border-radius: 8px;
+}
+
+/* Responsive: tự động giảm cột khi màn hình nhỏ */
+@media (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* ===== TH4 - Sticky Header + Scroll Top + Responsive ===== */
+
+/* Header sticky */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Nút Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 50px;
+  height: 50px;
+
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  font-size: 24px;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+/* Hover nút */
+.scroll-top:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Responsive: mobile menu xếp dọc */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+}
