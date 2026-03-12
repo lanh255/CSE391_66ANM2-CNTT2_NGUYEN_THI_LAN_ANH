@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 30px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input.error-border,
+select.error-border,
+textarea.error-border {
+  border-color: red;
+}
+
+input.success-border,
+select.success-border,
+textarea.success-border {
+  border-color: green;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  min-height: 18px;
+  display: block;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 16px;
+}
+
+.radio-group input {
+  width: auto;
+  margin-right: 5px;
+}
+
+.note-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#charCount {
+  font-size: 14px;
+  color: #555;
+}
+
+#charCount.over {
+  color: red;
+  font-weight: bold;
+}
+
+.total-box {
+  background: #f0f8ff;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.confirm-box {
+  margin-top: 20px;
+  padding: 16px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background: #eef6ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.confirm-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
