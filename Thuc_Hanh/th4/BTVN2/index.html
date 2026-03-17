@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-step Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Đăng Ký Nhiều Bước</h1>
+
+    <div class="progress-wrapper">
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+      <p id="progressText">Bước 1 / 3</p>
+    </div>
+
+    <form id="multiStepForm" novalidate>
+      <!-- BƯỚC 1 -->
+      <div class="step active" id="step1">
+        <h2>Bước 1 – Thông tin cá nhân</h2>
+
+        <div class="form-group">
+          <label for="hoTen">Họ tên</label>
+          <input type="text" id="hoTen">
+          <span class="error" id="hoTenError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="ngaySinh">Ngày sinh</label>
+          <input type="date" id="ngaySinh">
+          <span class="error" id="ngaySinhError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="gioiTinh">Giới tính</label>
+          <select id="gioiTinh">
+            <option value="">-- Chọn giới tính --</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+          </select>
+          <span class="error" id="gioiTinhError"></span>
+        </div>
+
+        <div class="buttons">
+          <button type="button" id="next1">Tiếp theo</button>
+        </div>
+      </div>
+
+      <!-- BƯỚC 2 -->
+      <div class="step" id="step2">
+        <h2>Bước 2 – Thông tin tài khoản</h2>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email">
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="matKhau">Mật khẩu</label>
+          <input type="password" id="matKhau">
+          <span class="error" id="matKhauError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="xacNhanMatKhau">Xác nhận mật khẩu</label>
+          <input type="password" id="xacNhanMatKhau">
+          <span class="error" id="xacNhanMatKhauError"></span>
+        </div>
+
+        <div class="buttons">
+          <button type="button" id="back1">Quay lại</button>
+          <button type="button" id="next2">Tiếp theo</button>
+        </div>
+      </div>
+
+      <!-- BƯỚC 3 -->
+      <div class="step" id="step3">
+        <h2>Bước 3 – Xác nhận thông tin</h2>
+
+        <div class="summary" id="summaryBox"></div>
+
+        <div class="buttons">
+          <button type="button" id="back2">Quay lại</button>
+          <button type="submit">Hoàn tất đăng ký</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

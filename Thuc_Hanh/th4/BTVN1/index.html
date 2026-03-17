@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nâng cấp Form Đăng Ký</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Đăng Ký</h1>
+
+    <form id="registerForm" novalidate>
+      <div class="form-group">
+        <label for="hoTen">Họ tên</label>
+        <input type="text" id="hoTen" maxlength="50">
+        <div class="meta-row">
+          <span class="error" id="hoTenError"></span>
+          <span id="nameCount">0/50</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="soDienThoai">Số điện thoại</label>
+        <input type="text" id="soDienThoai">
+        <span class="error" id="soDienThoaiError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="matKhau">Mật khẩu</label>
+
+        <div class="password-wrapper">
+          <input type="password" id="matKhau">
+          <button type="button" id="togglePassword" class="toggle-btn">👁</button>
+        </div>
+
+        <div class="strength-wrapper">
+          <div id="strengthBar"></div>
+        </div>
+        <div id="strengthText">Chưa nhập mật khẩu</div>
+
+        <span class="error" id="matKhauError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="gioiTinh">Giới tính</label>
+        <select id="gioiTinh">
+          <option value="">-- Chọn giới tính --</option>
+          <option value="Nam">Nam</option>
+          <option value="Nữ">Nữ</option>
+          <option value="Khác">Khác</option>
+        </select>
+        <span class="error" id="gioiTinhError"></span>
+      </div>
+
+      <button type="submit">Đăng ký</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
