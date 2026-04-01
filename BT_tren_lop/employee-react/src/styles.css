@@ -1,0 +1,152 @@
+:root {
+  --dark-header: #22272e;
+  --footer-blue: #001f97;
+  --light-bg: #eef1f4;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background: linear-gradient(90deg, #232629 0%, #1b2027 100%);
+  min-height: 72px;
+}
+
+.nav-link-custom {
+  color: #b9c0c8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link-custom.active,
+.nav-link-custom:hover {
+  color: #fff;
+}
+
+.header-search {
+  width: 260px;
+}
+
+.page-body {
+  flex: 1;
+  background: var(--light-bg);
+}
+
+.content-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.employee-table thead th {
+  background: #232323;
+  color: #fff;
+  font-weight: 700;
+  border-color: #232323;
+  font-size: 14px;
+}
+
+.employee-table tbody td {
+  border-color: #d8dce0;
+  font-size: 14px;
+}
+
+.employee-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.action-btn {
+  border-radius: 0 !important;
+}
+
+.status-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pagination-custom .page-link {
+  color: #1f5eff;
+}
+
+.pagination-custom .page-item.active .page-link {
+  background-color: #66a7ef;
+  border-color: #66a7ef;
+}
+
+.result-select {
+  width: 90px;
+}
+
+.result-label {
+  min-width: 60px;
+}
+
+.search-addon,
+.search-btn,
+.search-input {
+  height: 44px;
+}
+
+.footer-panel {
+  background: var(--footer-blue);
+  color: #fff;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.employee-modal-backdrop {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.modal-custom {
+  border: 2px solid #356eb4;
+  border-radius: 0;
+}
+
+.modal-title-custom {
+  color: #66789a;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.modal-label {
+  color: #66789a;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.modal-footer-custom {
+  background: #edf1f4;
+}
+
+.detail-row {
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+@media (max-width: 992px) {
+  .header-search {
+    width: 100%;
+  }
+}

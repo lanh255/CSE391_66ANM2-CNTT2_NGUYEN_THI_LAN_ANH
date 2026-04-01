@@ -1,0 +1,88 @@
+const employeesData = [
+  {
+    id: 1,
+    name: "Thomas Hardy",
+    email: "thomashardy@mail.com",
+    address: "89 Chiaroscuro Rd, Portland, USA",
+    phone: "0123456789",
+  },
+  {
+    id: 2,
+    name: "Dominique Perrier",
+    email: "dominiqueperrier@mail.com",
+    address: "Obere Str. 57, Berlin, Germany",
+    phone: "0987654321",
+  },
+  {
+    id: 3,
+    name: "Maria Anders",
+    email: "mariaanders@mail.com",
+    address: "25, rue Lauriston, Paris, France",
+    phone: "0912345678",
+  },
+  {
+    id: 4,
+    name: "Fran Wilson",
+    email: "franwilson@mail.com",
+    address: "C/ Araquil, 67, Madrid, Spain",
+    phone: "0934567890",
+  },
+  {
+    id: 5,
+    name: "Martin Blank",
+    email: "martinblank@mail.com",
+    address: "Via Monte Bianco 34, Turin, Italy",
+    phone: "0978123456",
+  },
+  {
+    id: 6,
+    name: "Anna Lee",
+    email: "annalee@mail.com",
+    address: "12 Oxford Street, London, UK",
+    phone: "0966666666",
+  },
+  {
+    id: 7,
+    name: "John Smith",
+    email: "johnsmith@mail.com",
+    address: "77 King Road, Sydney, Australia",
+    phone: "0955555555",
+  },
+  {
+    id: 8,
+    name: "Lina Chen",
+    email: "linachen@mail.com",
+    address: "8 Central Avenue, Singapore",
+    phone: "0944444444",
+  },
+  {
+    id: 9,
+    name: "Carlos Diaz",
+    email: "carlosdiaz@mail.com",
+    address: "91 Green Park, Madrid, Spain",
+    phone: "0933333333",
+  },
+  {
+    id: 10,
+    name: "Emma Stone",
+    email: "emmastone@mail.com",
+    address: "66 Lake View, Toronto, Canada",
+    phone: "0922222222",
+  },
+  {
+    id: 11,
+    name: "David Miller",
+    email: "davidmiller@mail.com",
+    address: "105 Sunset Blvd, Los Angeles, USA",
+    phone: "0911111111",
+  },
+  {
+    id: 12,
+    name: "Sophie Martin",
+    email: "sophiemartin@mail.com",
+    address: "14 Rue Victor Hugo, Paris, France",
+    phone: "0901234567",
+  },
+];
+
+export default employeesData;

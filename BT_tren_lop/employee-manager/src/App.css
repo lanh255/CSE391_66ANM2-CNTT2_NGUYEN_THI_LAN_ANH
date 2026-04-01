@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #efefef;
+  color: #333;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+.page-bg {
+  padding: 14px;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  background: #fff;
+  border: 2px solid #0a6a92;
+}
+
+.navbar {
+  min-height: 72px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #dddddd;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+.nav-links .active-link {
+  color: #1f1f1f;
+  font-weight: 600;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-right input {
+  width: 240px;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #cfd4da;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-btn {
+  height: 44px;
+  padding: 0 18px;
+  border: 1px solid #56ad66;
+  background: #fff;
+  color: #46a055;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.content-area {
+  padding: 32px 0 0;
+}
+
+.table-card {
+  margin-bottom: 22px;
+}
+
+.table-topbar {
+  background: #3f6288;
+  color: #fff;
+  min-height: 88px;
+  padding: 18px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-topbar h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.table-topbar h2 span {
+  font-weight: 700;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete-main-btn,
+.add-main-btn {
+  height: 38px;
+  border: none;
+  border-radius: 2px;
+  padding: 0 16px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.delete-main-btn {
+  background: #e74c5b;
+}
+
+.add-main-btn {
+  background: #2eb24a;
+}
+
+.circle-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.delete-main-btn .circle-icon {
+  color: #e74c5b;
+}
+
+.add-main-btn .circle-icon {
+  color: #2eb24a;
+}
+
+.table-body {
+  padding: 10px 28px 26px;
+  background: #fff;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table thead tr {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 2px solid #ececec;
+}
+
+.employee-table tbody tr {
+  border-bottom: 1px solid #ececec;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 14px 16px;
+  font-size: 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.employee-table th {
+  color: #222;
+  font-weight: 700;
+}
+
+.checkbox-col {
+  width: 52px;
+}
+
+.actions-col {
+  width: 120px;
+}
+
+.employee-table input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.action-icons {
+  white-space: nowrap;
+}
+
+.action-icons button {
+  border: none;
+  background: transparent;
+  font-size: 19px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-icon {
+  color: #f3b220;
+}
+
+.delete-icon {
+  color: #ec5a53;
+}
+
+.empty-row {
+  text-align: center !important;
+  color: #777;
+  padding: 28px 0 !important;
+}
+
+.table-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #737b87;
+  font-size: 15px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-btn {
+  border: none;
+  background: transparent;
+  color: #737b87;
+  font-size: 15px;
+  cursor: pointer;
+  min-width: 28px;
+  height: 32px;
+  padding: 0 6px;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.active-page {
+  background: #1ea6e8;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.employee-modal {
+  width: 480px;
+  background: #fff;
+  border: 2px solid #0a6a92;
+}
+
+.modal-header {
+  height: 92px;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.modal-header h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #66789d;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  color: #8f8f8f;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+.modal-form {
+  padding: 0;
+}
+
+.form-content {
+  padding: 26px 36px 0;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #66789d;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  padding: 12px 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 74px;
+  resize: vertical;
+}
+
+.error-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #d93025;
+}
+
+.modal-footer {
+  margin-top: 18px;
+  background: #eef1f4;
+  padding: 22px 36px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+}
+
+.cancel-btn,
+.add-btn {
+  min-width: 122px;
+  height: 46px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: transparent;
+  color: #333;
+}
+
+.add-btn {
+  background: #2eb24a;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .navbar,
+  .table-topbar,
+  .table-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .navbar-right {
+    width: 100%;
+  }
+
+  .navbar-right input {
+    flex: 1;
+    width: 100%;
+  }
+
+  .table-body {
+    overflow-x: auto;
+  }
+}

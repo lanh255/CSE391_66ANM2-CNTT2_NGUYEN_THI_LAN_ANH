@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.page-layout {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.modal-card,
+.table-card {
+  background: #fff;
+  border: 1px solid #dcdfe4;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.modal-header,
+.table-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2,
+.table-header h3 {
+  margin: 0;
+}
+
+.table-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+form {
+  padding: 18px 20px 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #84cc16;
+}
+
+.error {
+  display: block;
+  min-height: 18px;
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 12px;
+}
+
+.message {
+  min-height: 20px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.message.success {
+  color: #15803d;
+}
+
+.message.fail {
+  color: #dc2626;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  min-width: 90px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-add {
+  background: #8bc34a;
+  color: #fff;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+th {
+  background: #f9fafb;
+}
+
+.delete-btn {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+}

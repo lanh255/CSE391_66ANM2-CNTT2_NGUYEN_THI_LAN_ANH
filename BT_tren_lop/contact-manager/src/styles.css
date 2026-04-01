@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  background: #f3f3f3;
+  border: 2px solid #0b6c8f;
+}
+
+.container-custom {
+  padding: 38px 60px 50px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #111;
+  margin: 0;
+}
+
+.language-select {
+  width: 88px;
+  height: 32px;
+  font-size: 14px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.header-add-btn {
+  height: 34px;
+  padding: 0 22px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.header-divider {
+  border-top: 2px solid #d9d9d9;
+  margin-top: 36px;
+  margin-bottom: 50px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 0.95fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.panel-card {
+  background: #fff;
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 18px 18px 20px;
+}
+
+.panel-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+.panel-divider {
+  border-top: 2px solid #e1e1e1;
+  margin: 12px 0 16px;
+}
+
+.search-box {
+  height: 44px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact-card-custom {
+  border: 2px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 18px 16px 14px;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+.contact-fullname {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.custom-action-btn {
+  min-width: 62px;
+  height: 40px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 4px;
+}
+
+.contact-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.contact-detail-row .label {
+  min-width: 54px;
+  font-weight: 500;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.form-label-custom {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.custom-input {
+  height: 34px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.form-btn-dark,
+.form-btn-light {
+  min-width: 120px;
+  height: 34px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+  .container-custom {
+    padding: 24px 20px 30px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

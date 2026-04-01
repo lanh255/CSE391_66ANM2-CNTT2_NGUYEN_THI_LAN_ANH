@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Câu 2 - Add Employee with Javascript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-layout">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Add Employee</h2>
+        <button class="close-btn" type="button" id="resetTopBtn">×</button>
+      </div>
+
+      <form id="employeeForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter full name" />
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Enter email" />
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="4" placeholder="Enter address"></textarea>
+          <small class="error" id="addressError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="text" placeholder="Enter phone number" />
+          <small class="error" id="phoneError"></small>
+        </div>
+
+        <p id="messageBox" class="message"></p>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
+          <button type="submit" class="btn btn-add">Add</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <h3>Employee List</h3>
+        <p>Dữ liệu giả lập lấy từ <strong>data.js</strong></p>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
